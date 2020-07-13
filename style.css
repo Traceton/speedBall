@@ -9,3 +9,7 @@ img {
 canvas {
   background-color: black;
 }
+.main {
+  display: flex;
+  justify-content: center;
+}

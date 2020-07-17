@@ -1,30 +1,18 @@
-import * as elements from "./elements.js";
+import { Paddle } from "./paddle.js";
 
-let canvas = document.getElementById("canvas");
-let context = canvas.getContext("2d");
-let x = 0;
-let y = 0;
+export class Game {
+  constructor(gameWidth, gameHeight) {
+    this.gameWidth = gameWidth;
+    this.gameHeight = gameHeight;
+  }
 
-let init = () => {
-  window.requestAnimationFrame(gameLoop);
-};
+  start() {
+    this.paddle = new Paddle(this);
+  }
 
-let gameLoop = () => {
-  update();
-  draw();
+  update(deltaTime) {}
 
-  window.requestAnimationFrame(gameLoop);
-};
-
-let draw = () => {
-  context.clearRect(0, 0, canvas.width, canvas.height);
-  context.fillStyle = `#ff8080`;
-  context.fillRect(x, y, 150, 150);
-};
-
-let update = () => {
-  x += 5;
-  y += 7;
-};
-
-window.onload = init;
+  draw(context) {
+    this.paddle.draw(context);
+  }
+}

@@ -1,4 +1,5 @@
 import { Paddle } from "./paddle.js";
+import { InputHandler } from "./input.js";
 
 export class Game {
   constructor(gameWidth, gameHeight) {
@@ -8,11 +9,16 @@ export class Game {
 
   start() {
     this.paddle = new Paddle(this);
+    this.gameObjects = [this.paddle];
+
+    new InputHandler(this.paddle);
   }
 
-  update(deltaTime) {}
+  update(deltaTime) {
+    this.gameObjects.forEach((object) => object.update(deltaTime));
+  }
 
   draw(context) {
-    this.paddle.draw(context);
+    this.gameObjects.forEach((object) => object.draw(context));
   }
 }

@@ -1,5 +1,5 @@
 export class Paddle {
-  constructor(Game) {
+  constructor(game) {
     this.gameWidth = game.gameWidth;
     this.gameHeight = game.gameHeight;
     this.width = 150;
@@ -14,11 +14,22 @@ export class Paddle {
 
     this.maxSpeed = 6;
   }
-  draw() {
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    context.fillStyle = `#ff8080`;
+
+  moveLeft() {
+    this.speed = -this.maxSpeed;
+  }
+  moveRight() {
+    this.speed = this.maxSpeed;
+  }
+  stop() {
+    this.speed = 0;
+  }
+  draw(context) {
+    context.fillStyle = "#0ff";
     context.fillRect(this.position.x, this.position.y, this.width, this.height);
   }
 
-  update() {}
+  update(deltaTime) {
+    this.position.x += this.speed;
+  }
 }

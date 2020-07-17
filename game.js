@@ -1,6 +1,6 @@
 import { Paddle } from "./paddle.js";
 import { InputHandler } from "./input.js";
-
+import { Ball } from "./ball.js";
 export class Game {
   constructor(gameWidth, gameHeight) {
     this.gameWidth = gameWidth;
@@ -9,7 +9,8 @@ export class Game {
 
   start() {
     this.paddle = new Paddle(this);
-    this.gameObjects = [this.paddle];
+    this.ball = new Ball(this);
+    this.gameObjects = [this.paddle, this.ball];
 
     new InputHandler(this.paddle);
   }

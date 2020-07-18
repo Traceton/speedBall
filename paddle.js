@@ -11,7 +11,7 @@ export class Paddle {
     };
 
     this.speed = 0;
-    this.maxSpeed = 6;
+    this.maxSpeed = 10;
     this.speed2 = 0;
     this.maxSpeed2 = 3;
   }

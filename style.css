@@ -41,8 +41,10 @@ input {
   /* height: 30px; */
 }
 .main {
-  display: flex;
+  flex-direction: column;
+  /* display: flex; */
   justify-content: center;
+  text-align: center;
 }
 .instructions {
   display: flex;

@@ -1,5 +1,6 @@
 body,
 html {
+  touch-action: none;
   height: 100vh;
   background-color: black;
   margin-top: 1%;

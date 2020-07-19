@@ -11,6 +11,12 @@ export class Ball {
       x: 400,
       y: 10,
     };
+    setTimeout(() => {
+      console.log(this.score);
+    }, 30000);
+    setTimeout(() => {
+      console.log(this.score);
+    }, 60000);
 
     this.speed = {
       x: 7,
@@ -26,6 +32,7 @@ export class Ball {
 
   update(deltaTime) {
     // this.position.x += this.maxSpeed;
+
     this.position.x += this.speed.x;
     this.position.y += this.speed.y;
     if (this.position.x + this.size > this.gameWidth || this.position.x < 0) {
@@ -48,7 +55,7 @@ export class Ball {
       this.position.x + this.size <= rightOfPaddle
     ) {
       this.score++;
-      console.log(this.score);
+      // console.log(this.score);
       this.speed.x++;
       this.speed.y++;
       this.speed.y++;

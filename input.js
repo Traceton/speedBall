@@ -21,10 +21,10 @@ export class InputHandler {
           paddle.moveRight();
           break;
         case 87:
-          // paddle.moveUp();
+          paddle.maxSpeedUp();
           break;
         case 83:
-          // paddle.moveDown();
+          paddle.maxSpeedDown();
           break;
       }
     });
@@ -37,12 +37,6 @@ export class InputHandler {
           break;
         case 68:
           if (paddle.speed >= 0) paddle.stop();
-          break;
-        case 87:
-          // if (paddle.speed2 <= 0) paddle.stop2();
-          break;
-        case 83:
-          // if (paddle.speed2 >= 0) paddle.stop2();
           break;
       }
     });

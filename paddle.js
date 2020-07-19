@@ -12,8 +12,6 @@ export class Paddle {
 
     this.speed = 0;
     this.maxSpeed = 20;
-    this.speed2 = 0;
-    this.maxSpeed2 = 3;
   }
 
   moveLeft() {
@@ -23,19 +21,17 @@ export class Paddle {
     this.speed = this.maxSpeed;
   }
 
-  moveUp() {
-    this.speed2 = -this.maxSpeed2;
+  maxSpeedUp() {
+    this.maxSpeed++;
   }
 
-  moveDown() {
-    this.speed2 = this.maxSpeed2;
+  maxSpeedDown() {
+    this.maxSpeed--;
   }
   stop() {
     this.speed = 0;
   }
-  stop2() {
-    this.speed2 = 0;
-  }
+
   draw(context) {
     context.fillStyle = "#0ff";
     context.fillRect(this.position.x, this.position.y, this.width, this.height);
@@ -43,6 +39,5 @@ export class Paddle {
 
   update(deltaTime) {
     this.position.x += this.speed;
-    this.position.y += this.speed2;
   }
 }

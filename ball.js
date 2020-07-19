@@ -8,7 +8,7 @@ export class Ball {
     this.game = game;
     this.score = 0;
     this.position = {
-      x: 400,
+      x: 120,
       y: 10,
     };
     setTimeout(() => {

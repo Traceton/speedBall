@@ -25,3 +25,12 @@ let gameLoop = (timeStamp) => {
 };
 
 window.onload = init;
+
+export let output = document.getElementById("output");
+
+export let showScore = (score) => {
+  let h2 = document.createElement("h2");
+  let scoreName = document.createTextNode(score);
+  h2.append(scoreName);
+  output.append(h2);
+};

@@ -1,5 +1,5 @@
 import { Paddle } from "./paddle.js";
-
+import { output, showScore } from "./main.js";
 export class Ball {
   constructor(game) {
     this.gameWidth = game.gameWidth;
@@ -12,11 +12,24 @@ export class Ball {
       y: 10,
     };
     setTimeout(() => {
+      showScore(`30 SECOND SCORE -> ${this.score}`);
       console.log(this.score);
     }, 30000);
     setTimeout(() => {
+      showScore(`60 SECOND SCORE -> ${this.score}`);
+
       console.log(this.score);
     }, 60000);
+    setTimeout(() => {
+      showScore(`90 SECOND SCORE -> ${this.score}`);
+
+      console.log(this.score);
+    }, 90000);
+    setTimeout(() => {
+      showScore(`120 SECOND SCORE -> ${this.score}`);
+
+      console.log(this.score);
+    }, 120000);
 
     this.speed = {
       x: 7,

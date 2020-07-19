@@ -3,6 +3,7 @@ html {
   height: 100vh;
   background-color: gray;
   margin-top: 10%;
+  color: white;
 }
 img {
   display: none;
@@ -13,4 +14,10 @@ canvas {
 .main {
   display: flex;
   justify-content: center;
+}
+.controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

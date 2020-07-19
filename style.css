@@ -18,6 +18,9 @@ div h3 {
   margin: 0;
   color: blue;
 }
+input {
+  touch-action: none;
+}
 #restart {
   font-size: 3vh;
   margin: 2%;

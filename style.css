@@ -26,6 +26,14 @@ div h3 {
   width: 300px;
   height: 30px;
 }
+#startGame {
+  margin: 2%;
+  background-color: black;
+  color: blue;
+  border-radius: 8%;
+  width: 300px;
+  height: 30px;
+}
 .main {
   display: flex;
   justify-content: center;
@@ -42,4 +50,15 @@ div h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+.leftRight {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#goLeft,
+#goRight {
+  font-size: 5vh;
 }

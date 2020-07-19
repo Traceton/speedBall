@@ -1,3 +1,4 @@
+import { goLeft, goRight } from "./main.js";
 export class Paddle {
   constructor(game) {
     this.gameWidth = game.gameWidth;

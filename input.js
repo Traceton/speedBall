@@ -1,6 +1,6 @@
 // IMPORTS PADDLE
 import { Paddle } from "./paddle.js";
-
+import { goLeft, goRight } from "./main.js";
 // EXPORTS THE INPUT HANDLER CLASS, CALLS ON CERTAIN PADDLE METHODS
 // BASED UPON USER INPUT.
 export class InputHandler {
@@ -12,6 +12,18 @@ export class InputHandler {
   // A SWITCH STATEMENT TAKES IN THE KEYCODE, AND EITHER CALLS THE
   // PADDLE MOVELEFT OR MOVERIGHT FUNCTION, THEN BREAKS.
   constructor(paddle) {
+    goLeft.addEventListener("touchstart", function () {
+      paddle.moveLeft();
+    });
+    goRight.addEventListener("touchstart", function () {
+      paddle.moveRight();
+    });
+    goLeft.addEventListener("touchend", function () {
+      paddle.stop();
+    });
+    goRight.addEventListener("touchend", function () {
+      paddle.stop();
+    });
     document.addEventListener("keydown", (event) => {
       switch (event.keyCode) {
         case 65:

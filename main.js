@@ -2,14 +2,24 @@ import { Game } from "./game.js";
 import { Paddle } from "./paddle.js";
 import { InputHandler } from "./input.js";
 
+export let output = document.getElementById("output");
+let startGame = document.getElementById("startGame");
+export let goLeft = document.getElementById("goLeft");
+export let goRight = document.getElementById("goRight");
+
 let canvas = document.getElementById("canvas");
 let context = canvas.getContext("2d");
 const GAME_WIDTH = 800;
 const GAME_HEIGHT = 600;
 
 let game = new Game(GAME_WIDTH, GAME_HEIGHT);
-// NEXT, start game after a username is submited.
-game.start();
+
+let gameStarter = () => {
+  game.start();
+  init();
+};
+
+startGame.addEventListener("click", gameStarter);
 
 let init = () => {
   window.requestAnimationFrame(gameLoop);
@@ -24,10 +34,6 @@ let gameLoop = (timeStamp) => {
   game.draw(context);
   window.requestAnimationFrame(gameLoop);
 };
-
-window.onload = init;
-
-export let output = document.getElementById("output");
 
 export let showScore = (score) => {
   let h3 = document.createElement("h3");

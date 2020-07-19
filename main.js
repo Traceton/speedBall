@@ -36,8 +36,8 @@ let gameLoop = (timeStamp) => {
 };
 
 export let showScore = (score) => {
-  let h3 = document.createElement("h3");
+  let h2 = document.createElement("h2");
   let scoreName = document.createTextNode(score);
-  h3.append(scoreName);
-  output.append(h3);
+  h2.append(scoreName);
+  output.append(h2);
 };

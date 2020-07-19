@@ -6,6 +6,7 @@ export let output = document.getElementById("output");
 let startGame = document.getElementById("startGame");
 export let goLeft = document.getElementById("goLeft");
 export let goRight = document.getElementById("goRight");
+let instructions = document.getElementById("instructions");
 
 let canvas = document.getElementById("canvas");
 let context = canvas.getContext("2d");
@@ -17,6 +18,7 @@ let game = new Game(GAME_WIDTH, GAME_HEIGHT);
 let gameStarter = () => {
   game.start();
   init();
+  instructions.classList = "hidden";
 };
 
 startGame.addEventListener("click", gameStarter);

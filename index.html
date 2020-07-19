@@ -10,7 +10,7 @@
     <div class="main">
       <h3>If on mobile, please request desktop site :)</h3>
       <img src="./assets/spaceBall.png" alt="" />
-      <canvas id="canvas" width="800px" height="600px"> </canvas>
+      <canvas class="mobileSize" id="canvas"> </canvas>
     </div>
     <div class="controls">
       <div>
@@ -27,7 +27,7 @@
         />
         <input id="startGame" type="button" value="Start Game" />
       </div>
-      <div class="instructions">
+      <div id="instructions" class="instructions">
         <h3>
           The goal is to bounce the ball on the paddle <br />
           as many times as possible before time runs out
@@ -36,12 +36,12 @@
         <h3>W key -> Paddle speed Up, S key -> Paddle speed Down</h3>
         <h3>30, 60, 90, and 120 second results will appear below</h3>
       </div>
-      <div id="output"></div>
     </div>
     <div class="leftRight">
       <div><input type="button" id="goLeft" value="LEFT" /></div>
       <div><input type="button" id="goRight" value="RIGHT" /></div>
     </div>
+    <div id="output"></div>
   </body>
   <script type="module" src="./main.js"></script>
 </html>

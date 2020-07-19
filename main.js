@@ -30,8 +30,8 @@ window.onload = init;
 export let output = document.getElementById("output");
 
 export let showScore = (score) => {
-  let h2 = document.createElement("h2");
+  let h3 = document.createElement("h3");
   let scoreName = document.createTextNode(score);
-  h2.append(scoreName);
-  output.append(h2);
+  h3.append(scoreName);
+  output.append(h3);
 };

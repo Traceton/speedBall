@@ -39,7 +39,7 @@ export class Ball {
   }
 
   draw(context) {
-    context.fillStyle = "#0ff";
+    context.fillStyle = "blue";
     context.fillRect(this.position.x, this.position.y, this.size, this.size);
   }
 

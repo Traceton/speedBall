@@ -1,6 +1,5 @@
 body,
 html {
-  touch-action: manipulation;
   height: 100vh;
   background-color: black;
   margin-top: 1%;
@@ -69,6 +68,8 @@ input {
   text-align: center;
 }
 .leftRight {
+  touch-action: manipulation;
+
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;

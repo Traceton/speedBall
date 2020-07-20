@@ -13,6 +13,9 @@ let context = canvas.getContext("2d");
 const GAME_WIDTH = 800;
 const GAME_HEIGHT = 600;
 
+console.log(window.innerHeight);
+console.log(window.innerWidth);
+
 let game = new Game(GAME_WIDTH, GAME_HEIGHT);
 
 let gameStarter = () => {

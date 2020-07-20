@@ -4,6 +4,7 @@ html {
   background-color: black;
   margin-top: 1%;
   color: white;
+  touch-action: manipulation;
 }
 img {
   display: none;
@@ -19,7 +20,7 @@ div h3 {
   color: blue;
 }
 input {
-  touch-action: manipulation;
+  touch-action: none;
 }
 .desktopSize {
   width: 800px;
@@ -68,7 +69,7 @@ input {
   text-align: center;
 }
 .leftRight {
-  touch-action: manipulation;
+  touch-action: none;
 
   display: flex;
   flex-direction: row;

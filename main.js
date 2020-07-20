@@ -12,15 +12,15 @@ let canvas = document.getElementById("canvas");
 let context = canvas.getContext("2d");
 
 let windowWidth = window.innerWidth - 20;
-let windowHeight = window.innerHeight - 400;
+let windowHeight = window.innerHeight;
 
 console.log(windowWidth);
 console.log(windowHeight);
 
 canvas.width = windowWidth;
-canvas.height = windowHeight;
+canvas.height = windowWidth;
 const GAME_WIDTH = windowWidth;
-const GAME_HEIGHT = windowHeight;
+const GAME_HEIGHT = windowWidth;
 
 let game = new Game(GAME_WIDTH, GAME_HEIGHT);
 

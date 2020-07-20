@@ -14,6 +14,12 @@ let context = canvas.getContext("2d");
 let windowWidth = window.innerWidth - 20;
 let windowHeight = window.innerHeight;
 
+if (window.innerWidth > 635) {
+  windowWidth = window.innerWidth / 2;
+} else if (window.innerWidth <= 635) {
+  windowWidth = window.innerWidth - 20;
+}
+
 console.log(windowWidth);
 console.log(windowHeight);
 

@@ -1,6 +1,6 @@
 body,
 html {
-  touch-action: none;
+  touch-action: manipulation;
   height: 100vh;
   background-color: black;
   margin-top: 1%;
@@ -20,7 +20,7 @@ div h3 {
   color: blue;
 }
 input {
-  touch-action: none;
+  touch-action: manipulation;
 }
 .desktopSize {
   width: 800px;

@@ -12,7 +12,7 @@ export class Paddle {
     };
 
     this.speed = 0;
-    this.maxSpeed = 20;
+    this.maxSpeed = 12;
   }
 
   moveLeft() {

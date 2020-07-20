@@ -10,11 +10,17 @@ let instructions = document.getElementById("instructions");
 
 let canvas = document.getElementById("canvas");
 let context = canvas.getContext("2d");
-const GAME_WIDTH = 800;
-const GAME_HEIGHT = 600;
 
-console.log(window.innerHeight);
-console.log(window.innerWidth);
+let windowWidth = window.innerWidth - 20;
+let windowHeight = window.innerHeight - 400;
+
+console.log(windowWidth);
+console.log(windowHeight);
+
+canvas.width = windowWidth;
+canvas.height = windowHeight;
+const GAME_WIDTH = windowWidth;
+const GAME_HEIGHT = windowHeight;
 
 let game = new Game(GAME_WIDTH, GAME_HEIGHT);
 

@@ -3,7 +3,7 @@ export class Paddle {
   constructor(game) {
     this.gameWidth = game.gameWidth;
     this.gameHeight = game.gameHeight;
-    this.width = 150;
+    this.width = this.gameWidth / 4;
     this.height = 20;
 
     this.position = {

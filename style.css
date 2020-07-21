@@ -27,6 +27,7 @@ input {
   touch-action: none;
   font-family: "Permanent Marker", cursive;
   -webkit-appearance: none;
+  -webkit-user-select: none;
   -moz-appearance: none;
   appearance: none;
   opacity: 1;

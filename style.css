@@ -84,7 +84,7 @@ a {
 }
 .leftRight {
   touch-action: none;
-
+  -webkit-user-select: none;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;

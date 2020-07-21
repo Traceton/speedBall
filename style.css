@@ -26,6 +26,10 @@ input {
   touch-action: none;
   font-family: "Permanent Marker", cursive;
 }
+a {
+  text-decoration: none;
+  color: green;
+}
 .desktopSize {
   width: 800px;
   height: 600px;

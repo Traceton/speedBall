@@ -1,26 +1,30 @@
 body,
 html {
   height: 100vh;
-  background-color: black;
-  margin-top: 1%;
-  color: white;
+  background-image: url("./assets/greenPlanet.jpeg");
+  background-repeat: repeat;
+  /* margin-top: 1%; */
+  color: black;
   touch-action: manipulation;
+  font-family: "Permanent Marker", cursive;
 }
 img {
   display: none;
 }
 canvas {
-  background-color: black;
+  background-color: transparent;
   border-style: solid;
-  border-color: blue;
+  border-color: white;
+  border-width: thin;
   border-radius: 6%;
 }
 div h3 {
   margin: 0;
-  color: blue;
+  color: white;
 }
 input {
   touch-action: none;
+  font-family: "Permanent Marker", cursive;
 }
 .desktopSize {
   width: 800px;
@@ -34,7 +38,7 @@ input {
   font-size: 3vh;
   margin: 2%;
   background-color: black;
-  color: blue;
+  color: white;
   border-radius: 8%;
   /* width: 300px; */
   /* height: 30px; */
@@ -43,7 +47,7 @@ input {
   font-size: 3vh;
   margin: 2%;
   background-color: black;
-  color: blue;
+  color: white;
   border-radius: 8%;
   /* width: 300px; */
   /* height: 30px; */
@@ -92,6 +96,6 @@ input {
 #goRight {
   border-radius: 8%;
   background-color: black;
-  color: blue;
+  color: white;
   font-size: 5vh;
 }

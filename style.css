@@ -33,6 +33,7 @@ input {
   -webkit-appearance: none;
   -webkit-user-select: none;
   -moz-appearance: none;
+  -moz-user-select: none;
   appearance: none;
   opacity: 1;
 }
@@ -89,6 +90,7 @@ a {
 .leftRight {
   touch-action: none;
   -webkit-user-select: none;
+  -moz-user-select: none;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -111,6 +113,7 @@ a {
 #goRight {
   touch-action: none;
   -webkit-user-select: none;
+  -moz-user-select: none;
   border-radius: 8%;
   background-color: black;
   color: white;

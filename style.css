@@ -13,11 +13,12 @@ img {
   display: none;
 }
 canvas {
-  background-color: transparent;
+  background-color: black;
   border-style: solid;
   border-color: white;
   border-width: thin;
   border-radius: 6%;
+  opacity: 0.7;
 }
 div h3 {
   margin: 0;

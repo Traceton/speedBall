@@ -109,6 +109,8 @@ a {
 
 #goLeft,
 #goRight {
+  touch-action: none;
+  -webkit-user-select: none;
   border-radius: 8%;
   background-color: black;
   color: white;

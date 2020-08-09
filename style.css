@@ -81,6 +81,7 @@ a {
   text-align: center;
 }
 .controls {
+  -webkit-touch-callout: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -89,6 +90,7 @@ a {
 }
 .leftRight {
   touch-action: none;
+  -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   display: flex;

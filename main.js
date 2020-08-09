@@ -12,7 +12,7 @@ let checkScores = document.getElementById("checkScores");
 let saveScore = document.getElementById("saveScore");
 let username = document.getElementById("username");
 
-let canvas = document.getElementById("canvas");
+export let canvas = document.getElementById("canvas");
 let context = canvas.getContext("2d");
 
 let windowWidth = window.innerWidth - 20;

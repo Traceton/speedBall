@@ -1,5 +1,5 @@
 import { Paddle } from "./paddle.js";
-import { output, showScore, sendGameSession } from "./main.js";
+import { output, showScore, sendGameSession, canvas } from "./main.js";
 export let currentGameScore;
 export class Ball {
   constructor(game) {
@@ -13,6 +13,7 @@ export class Ball {
       y: 10,
     };
     setTimeout(() => {
+      canvas.classList = "hidden";
       showScore(`20 SECOND SCORE -> ${this.score}`);
       currentGameScore = this.score;
       // console.log(this.score);

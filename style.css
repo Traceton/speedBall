@@ -131,11 +131,20 @@ a {
 }
 
 #checkScores,
-#saveScore,
-#username {
+#saveScore {
   touch-action: none;
   -webkit-user-select: none;
   -moz-user-select: none;
+  border-radius: 8%;
+  background-color: black;
+  color: white;
+  font-size: 3vh;
+  max-width: 8em;
+}
+#username {
+  touch-action: none;
+  -webkit-user-select: text;
+  -moz-user-select: text;
   border-radius: 8%;
   background-color: black;
   color: white;

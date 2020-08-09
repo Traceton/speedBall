@@ -9,8 +9,10 @@ export let goRight = document.getElementById("goRight");
 let instructions = document.getElementById("instructions");
 
 let checkScores = document.getElementById("checkScores");
-let saveScore = document.getElementById("saveScore");
-let username = document.getElementById("username");
+export let saveScore = document.getElementById("saveScore");
+export let username = document.getElementById("username");
+
+let restart = document.getElementById("restart");
 
 export let canvas = document.getElementById("canvas");
 let context = canvas.getContext("2d");
@@ -35,6 +37,7 @@ const GAME_HEIGHT = windowWidth;
 let game = new Game(GAME_WIDTH, GAME_HEIGHT);
 
 let gameStarter = () => {
+  restart.classList.remove("hidden");
   game.start();
   init();
   instructions.classList = "hidden";

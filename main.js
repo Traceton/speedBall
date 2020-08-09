@@ -86,6 +86,7 @@ export let sendGameSession = async (score) => {
       })
         .then((res) => res.json())
         .then((json) => console.log(json));
+      username.value = "";
     } catch (error) {
       console.log("session could not be saved.");
     }

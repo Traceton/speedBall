@@ -1,12 +1,16 @@
 import { Game } from "./game.js";
 import { Paddle } from "./paddle.js";
 import { InputHandler } from "./input.js";
-
+import { currentGameScore } from "./ball.js";
 export let output = document.getElementById("output");
 let startGame = document.getElementById("startGame");
 export let goLeft = document.getElementById("goLeft");
 export let goRight = document.getElementById("goRight");
 let instructions = document.getElementById("instructions");
+
+let checkScores = document.getElementById("checkScores");
+let saveScore = document.getElementById("saveScore");
+let username = document.getElementById("username");
 
 let canvas = document.getElementById("canvas");
 let context = canvas.getContext("2d");
@@ -20,8 +24,8 @@ if (window.innerWidth > 635) {
   windowWidth = window.innerWidth - 20;
 }
 
-console.log(windowWidth);
-console.log(windowHeight);
+// console.log(windowWidth);
+// console.log(windowHeight);
 
 canvas.width = windowWidth;
 canvas.height = windowWidth;
@@ -58,3 +62,37 @@ export let showScore = (score) => {
   h2.append(scoreName);
   output.append(h2);
 };
+
+let getGameSessions = () => {
+  console.log("checking game sessions...");
+};
+
+export let sendGameSession = async (score) => {
+  let gameSession = {
+    username: username.value,
+    game: "speedBall",
+    score: currentGameScore,
+  };
+  console.log(JSON.stringify(gameSession));
+  if (currentGameScore != undefined && username.value != "") {
+    // console.log(`sending game session -> ${gameSession}`);
+    try {
+      await fetch("https://gamescoreserver.herokuapp.com/gameSessions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(gameSession),
+      })
+        .then((res) => res.json())
+        .then((json) => console.log(json));
+    } catch (error) {
+      console.log("session could not be saved.");
+    }
+  } else {
+    console.log("No game played yet or username not entered");
+  }
+};
+
+checkScores.addEventListener("click", getGameSessions);
+saveScore.addEventListener("click", sendGameSession);

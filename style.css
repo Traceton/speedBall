@@ -53,7 +53,7 @@ a {
   font-size: 3vh;
   margin: 2%;
   background-color: black;
-  color: white;
+  color: red;
   border-radius: 8%;
   /* width: 300px; */
   /* height: 30px; */
@@ -95,6 +95,16 @@ a {
   flex-direction: row;
   justify-content: space-evenly;
 }
+.serverCom {
+  touch-action: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
 #output {
   display: flex;
   justify-content: center;
@@ -118,4 +128,17 @@ a {
   background-color: black;
   color: white;
   font-size: 5vh;
+}
+
+#checkScores,
+#saveScore,
+#username {
+  touch-action: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  border-radius: 8%;
+  background-color: black;
+  color: white;
+  font-size: 3vh;
+  max-width: 8em;
 }

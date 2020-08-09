@@ -41,6 +41,7 @@ let gameStarter = () => {
   game.start();
   init();
   instructions.classList = "hidden";
+  startGame.classList = "hidden";
 };
 
 startGame.addEventListener("click", gameStarter);

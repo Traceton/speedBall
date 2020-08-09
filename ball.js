@@ -23,6 +23,7 @@ export class Ball {
       canvas.classList = "hidden";
       saveScore.classList.remove("hidden");
       username.classList.remove("hidden");
+
       showScore(`20 SECOND SCORE -> ${this.score}`);
       currentGameScore = this.score;
       // console.log(this.score);

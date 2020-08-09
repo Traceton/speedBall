@@ -8,7 +8,7 @@ export let goLeft = document.getElementById("goLeft");
 export let goRight = document.getElementById("goRight");
 let instructions = document.getElementById("instructions");
 
-let checkScores = document.getElementById("checkScores");
+export let checkScores = document.getElementById("checkScores");
 export let saveScore = document.getElementById("saveScore");
 export let username = document.getElementById("username");
 
@@ -42,6 +42,7 @@ let gameStarter = () => {
   init();
   instructions.classList = "hidden";
   startGame.classList = "hidden";
+  checkScores.classList = "hidden";
 };
 
 startGame.addEventListener("click", gameStarter);

@@ -6,6 +6,7 @@ import {
   canvas,
   saveScore,
   username,
+  checkScores,
 } from "./main.js";
 export let currentGameScore;
 export class Ball {
@@ -23,8 +24,8 @@ export class Ball {
       canvas.classList = "hidden";
       saveScore.classList.remove("hidden");
       username.classList.remove("hidden");
-
-      showScore(`20 SECOND SCORE -> ${this.score}`);
+      checkScores.classList.remove("hidden");
+      showScore(`SCORE -> ${this.score}`);
       currentGameScore = this.score;
       // console.log(this.score);
       this.speed.x = 0.3;

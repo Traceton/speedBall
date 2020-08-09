@@ -13,12 +13,12 @@ export class Ball {
       y: 10,
     };
     setTimeout(() => {
-      showScore(`5 SECOND SCORE -> ${this.score}`);
+      showScore(`20 SECOND SCORE -> ${this.score}`);
       currentGameScore = this.score;
       // console.log(this.score);
       this.speed.x = 0.3;
       this.speed.y = 0.3;
-    }, 5000);
+    }, 20000);
 
     this.speed = {
       x: 7,

@@ -11,10 +11,12 @@ let printTop5Scores = () => {};
 
 let getSpeedBallSessions = (allGameSessions) => {
   for (let session in allGameSessions) {
-    printAllScores(
-      allGameSessions[session].username,
-      allGameSessions[session].score
-    );
+    if (allGameSessions[session].game == "speedBall") {
+      printAllScores(
+        allGameSessions[session].username,
+        allGameSessions[session].score
+      );
+    }
   }
 };
 

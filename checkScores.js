@@ -1,4 +1,4 @@
-let top5 = document.getElementById("top5");
+let topScore = document.getElementById("topScore");
 let allScores = document.getElementById("allScores");
 
 let printAllScores = async (username, score) => {
@@ -7,7 +7,24 @@ let printAllScores = async (username, score) => {
   allScores.append(h3);
 };
 
-let printTop5Scores = () => {};
+let printTopScore = async (highestScore) => {
+  let h3 = document.createElement("h3");
+  h3.append(`${highestScore}`);
+  topScore.append(h3);
+};
+
+let topSpeedBallSession = (allGameSessions) => {
+  let currentHighScore = 0;
+  let highestScore;
+  Object.entries(allGameSessions).forEach(([key, value]) => {
+    // console.log(`${value.username} ${value.score}`);
+    if (value.score > currentHighScore) {
+      currentHighScore = value.score;
+      highestScore = `${value.username} -> ${value.score}`;
+    }
+  });
+  printTopScore(highestScore);
+};
 
 let getSpeedBallSessions = (allGameSessions) => {
   for (let session in allGameSessions) {
@@ -26,6 +43,7 @@ let getGameSessions = () => {
       .then((res) => res.json())
       .then((json) => {
         getSpeedBallSessions(json);
+        topSpeedBallSession(json);
       });
   } catch (error) {
     console.log("game sessions could not be found");

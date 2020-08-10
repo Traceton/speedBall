@@ -1,18 +1,26 @@
+// main javascript for the checkScores.html page.
+
+// the divs for which the scores are meant to be displayed to.
 let topScore = document.getElementById("topScore");
 let allScores = document.getElementById("allScores");
 
-let printAllScores = async (username, score) => {
+// creates a h3 containing all of the usernames and scores
+// associated with the game speedBall.
+let printAllScores = (username, score) => {
   let h3 = document.createElement("h3");
   h3.append(`${username} -> ${score}`);
   allScores.append(h3);
 };
 
-let printTopScore = async (highestScore) => {
+// prints a h3 element with the top speedBall score.
+let printTopScore = (highestScore) => {
   let h3 = document.createElement("h3");
   h3.append(`${highestScore}`);
   topScore.append(h3);
 };
 
+// gets the top score from all of the game sessions from getSpeedBallSessions
+// and sends top score to printTopScore
 let topSpeedBallSession = (allGameSessions) => {
   let currentHighScore = 0;
   let highestScore;
@@ -26,6 +34,8 @@ let topSpeedBallSession = (allGameSessions) => {
   printTopScore(highestScore);
 };
 
+// gets all game sessions associated with speedBall
+//  and sends them to printAllScores
 let getSpeedBallSessions = (allGameSessions) => {
   for (let session in allGameSessions) {
     if (allGameSessions[session].game == "speedBall") {
@@ -37,6 +47,8 @@ let getSpeedBallSessions = (allGameSessions) => {
   }
 };
 
+// sends a fetch request to the gameScoreServer i have hosted on heroku.
+// than sends the response to getSpeedBallSessions and topSpeedBallSessions
 let getGameSessions = () => {
   try {
     fetch("https://gamescoreserver.herokuapp.com/gameSessions")
@@ -50,4 +62,5 @@ let getGameSessions = () => {
   }
 };
 
+// calls getGameSessions when the window is loaded.
 window.onload = getGameSessions;

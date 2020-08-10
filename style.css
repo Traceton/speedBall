@@ -153,3 +153,21 @@ a {
   font-size: 3vh;
   max-width: 8em;
 }
+
+/* check scores html */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.scores {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}

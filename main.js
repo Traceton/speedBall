@@ -68,10 +68,6 @@ export let showScore = (score) => {
   output.append(h2);
 };
 
-let getGameSessions = () => {
-  console.log("checking game sessions...");
-};
-
 export let sendGameSession = async (score) => {
   let gameSession = {
     username: username.value,
@@ -100,5 +96,4 @@ export let sendGameSession = async (score) => {
   }
 };
 
-checkScores.addEventListener("click", getGameSessions);
 saveScore.addEventListener("click", sendGameSession);

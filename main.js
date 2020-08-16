@@ -72,12 +72,13 @@ export let sendGameSession = async (score) => {
   let gameSession = {
     username: username.value,
     game: "speedBall",
-    score: currentGameScore,
+    stringScore: "numScore",
+    numScore: currentGameScore,
   };
 
   if (currentGameScore != undefined && username.value != "") {
     try {
-      await fetch("https://gamescoreserver.herokuapp.com/gameSessions", {
+      await fetch("https://resting-node.herokuapp.com/gameSessions", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

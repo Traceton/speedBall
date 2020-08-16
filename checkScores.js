@@ -26,9 +26,9 @@ let topSpeedBallSession = (allGameSessions) => {
   let highestScore;
   Object.entries(allGameSessions).forEach(([key, value]) => {
     // console.log(`${value.username} ${value.score}`);
-    if (value.score > currentHighScore) {
-      currentHighScore = value.score;
-      highestScore = `${value.username} -> ${value.score}`;
+    if (value.numScore > currentHighScore) {
+      currentHighScore = value.numScore;
+      highestScore = `${value.username} -> ${value.numScore}`;
     }
   });
   printTopScore(highestScore);
@@ -41,7 +41,7 @@ let getSpeedBallSessions = (allGameSessions) => {
     if (allGameSessions[session].game == "speedBall") {
       printAllScores(
         allGameSessions[session].username,
-        allGameSessions[session].score
+        allGameSessions[session].numScore
       );
     }
   }
@@ -51,7 +51,7 @@ let getSpeedBallSessions = (allGameSessions) => {
 // than sends the response to getSpeedBallSessions and topSpeedBallSessions
 let getGameSessions = () => {
   try {
-    fetch("https://gamescoreserver.herokuapp.com/gameSessions")
+    fetch("https://resting-node.herokuapp.com/gameSessions")
       .then((res) => res.json())
       .then((json) => {
         getSpeedBallSessions(json);

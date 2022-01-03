@@ -1,5 +1,5 @@
 # speedBall
-## Hosted on Heroku at https://tjcharm.github.io/speedBall/
+## Hosted on Heroku at https://traceton.github.io/speedBall/
 
 A basic javascript game to be played for 20 seconds, with the goal being to bounce the ball on the paddle as many times as possible.
 
